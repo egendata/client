@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/egendata/client#readme",
   "dependencies": {
-    "@egendata/messaging": "0.3.2",
+    "@egendata/messaging": "^0.4.2",
     "@hapi/joi": "^15.0.3",
     "@panva/jose": "^1.0.1",
     "axios": "^0.18.1",
