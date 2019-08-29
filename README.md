@@ -1,5 +1,7 @@
 # Egendata-client
 
+![Dependabot Enabled](https://flat.badgen.net/dependabot/egendata/client?icon=dependabot)
+
 Client library for Egendata operator
 
 ## Install
