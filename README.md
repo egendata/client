@@ -1,4 +1,10 @@
-# Egendata-client
+# @egendata/client
+
+![License](https://flat.badgen.net/github/license/egendata/client)
+![Dependabot](https://flat.badgen.net/dependabot/egendata/client?icon=dependabot)
+![Travis CI](https://flat.badgen.net/travis/egendata/client?icon=travis)
+![Github release](https://flat.badgen.net/github/release/egendata/client?icon=github)
+![npm version](https://flat.badgen.net/npm/v/@egendata/client?icon=npm)
 
 Client library for Egendata operator
 
