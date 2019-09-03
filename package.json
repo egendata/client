@@ -57,7 +57,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "jest": "^24.8.0",
     "semantic-release": "^15.13.24",
-    "supertest": "^3.4.2",
+    "supertest": "^4.0.2",
     "tar": "^4.4.10",
     "uuid": "^3.3.2"
   },
