@@ -2,7 +2,7 @@ const createClient = require('../lib/client')
 const { createMemoryStore } = require('../lib/memoryStore')
 const axios = require('axios')
 const { generateKey } = require('../lib/crypto')
-const { JWT } = require('@panva/jose')
+const { JWT } = require('jose')
 const { CONNECT_TO_OPERATOR_START, CONNECT_TO_OPERATOR } = require('../lib/events')
 jest.mock('axios')
 

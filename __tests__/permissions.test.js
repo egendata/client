@@ -30,7 +30,7 @@ describe('permissions', () => {
     it('creates an encryption key for READ', async () => {
       const jwk = { kid: 'foo', kty: 'RSA', use: 'enc', e: 'AQAB', n: 'a-large-number' }
       keyProvider.generateTemporaryKey.mockResolvedValue(jwk)
-      shorthandPermissions = [ { area: 'education', types: ['READ'], purpose: 'stuff' } ]
+      shorthandPermissions = [{ area: 'education', types: ['READ'], purpose: 'stuff' }]
 
       const result = await createPermissions(shorthandPermissions, clientId, keyProvider)
 
