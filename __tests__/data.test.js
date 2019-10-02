@@ -95,11 +95,11 @@ describe('data', () => {
   describe('#read', () => {
     let data
     function createJWE (data) {
-      const signed = JWS.sign(JSON.stringify(data), JWK.importKey(signingKey), { kid: signingKey.kid })
+      const signed = JWS.sign(JSON.stringify(data), JWK.asKey(signingKey), { kid: signingKey.kid })
       const encryptor = new JWE.Encrypt(signed)
-      encryptor.recipient(JWK.importKey(toPublicKey(accountEncryptionKey)),
+      encryptor.recipient(JWK.asKey(toPublicKey(accountEncryptionKey)),
         { kid: accountEncryptionKey.kid })
-      encryptor.recipient(JWK.importKey(toPublicKey(serviceEncryptionKey)),
+      encryptor.recipient(JWK.asKey(toPublicKey(serviceEncryptionKey)),
         { kid: serviceEncryptionKey.kid })
       return encryptor.encrypt('general')
     }
@@ -237,11 +237,11 @@ describe('data', () => {
     describe('#read', () => {
       let data
       function createJWE (data) {
-        const signed = JWS.sign(JSON.stringify(data), JWK.importKey(signingKey), { kid: signingKey.kid })
+        const signed = JWS.sign(JSON.stringify(data), JWK.asKey(signingKey), { kid: signingKey.kid })
         const encryptor = new JWE.Encrypt(signed)
-        encryptor.recipient(JWK.importKey(toPublicKey(accountEncryptionKey)),
+        encryptor.recipient(JWK.asKey(toPublicKey(accountEncryptionKey)),
           { kid: accountEncryptionKey.kid })
-        encryptor.recipient(JWK.importKey(toPublicKey(serviceEncryptionKey)),
+        encryptor.recipient(JWK.asKey(toPublicKey(serviceEncryptionKey)),
           { kid: serviceEncryptionKey.kid })
         return encryptor.encrypt('general')
       }
