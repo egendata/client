@@ -1,6 +1,6 @@
 const createClient = require('../lib/client')
 const { createMemoryStore } = require('../lib/memoryStore')
-const { JWT } = require('@panva/jose')
+const { JWT } = require('jose')
 const { connectionInitHandler, connectionEventHandler } = require('./../lib/connection')
 const { sign } = require('../lib/jwt')
 const { generateKey, toPublicKey } = require('../lib/crypto')
@@ -64,7 +64,7 @@ describe('connection', () => {
         await handle({ payload }, res, next)
         expect(next).not.toHaveBeenCalled()
 
-        const [ token ] = res.write.mock.calls[0]
+        const [token] = res.write.mock.calls[0]
         const result = JWT.decode(token)
 
         expect(result).not.toBe(null)

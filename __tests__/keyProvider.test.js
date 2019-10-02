@@ -94,7 +94,7 @@ describe('KeyProvider', () => {
     it('returns a jwks with client_key', async () => {
       const result = await keyProvider.jwksKeyList()
       expect(result).toEqual({
-        keys: [ toPublicKey(clientKey) ]
+        keys: [toPublicKey(clientKey)]
       })
     })
   })
