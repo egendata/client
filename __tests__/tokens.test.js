@@ -207,10 +207,10 @@ describe('tokens', () => {
       domain = 'https://mycv.work'
       area = 'edumacation'
       data = ['Jag älskar hästar']
-      const signedData = await JWS.sign(JSON.stringify(data), JWK.importKey(serviceSigningKey), { kid: serviceSigningKey.kid })
+      const signedData = await JWS.sign(JSON.stringify(data), JWK.asKey(serviceSigningKey), { kid: serviceSigningKey.kid })
       const encrypt = new JWE.Encrypt(signedData)
-      encrypt.recipient(JWK.importKey(accountEncryptionKey), { kid: accountEncryptionKey.kid })
-      encrypt.recipient(JWK.importKey(serviceEncryptionKey), { kid: serviceEncryptionKey.kid })
+      encrypt.recipient(JWK.asKey(accountEncryptionKey), { kid: accountEncryptionKey.kid })
+      encrypt.recipient(JWK.asKey(serviceEncryptionKey), { kid: serviceEncryptionKey.kid })
       jwe = encrypt.encrypt('general')
     })
     it('creates a valid jwt', async () => {

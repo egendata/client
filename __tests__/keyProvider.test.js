@@ -6,7 +6,8 @@ const jsonToBase64 = (obj) => Buffer.from(JSON.stringify(obj), 'utf8').toString(
 const base64ToJson = (str) => JSON.parse(Buffer.from(str, 'base64').toString('utf8'))
 
 describe('KeyProvider', () => {
-  let keyOptions, keyProvider, pemKey, clientKey, keyValueStore, domain, jwksURI
+  let keyOptions, pemKey, clientKey, domain, jwksURI
+  let keyProvider, keyValueStore
   beforeEach(async () => {
     keyValueStore = {
       load: jest.fn().mockName('load').mockResolvedValue(''),
@@ -25,13 +26,17 @@ describe('KeyProvider', () => {
       privateKeyEncoding: { type: 'pkcs1', format: 'pem' }
     }).privateKey
     clientKey = importPEM(pemKey, jwksURI, { use: 'sig', kid: `${jwksURI}/client_key` })
-    keyProvider = new KeyProvider({ clientKey: pemKey, keyValueStore, keyOptions, jwksURI })
+    keyProvider = new KeyProvider({
+      config: { clientKey: pemKey, keyValueStore, keyOptions, jwksURI }
+    })
   })
   it('works with a PEM client key', () => {
     expect(keyProvider.clientKey).toEqual(clientKey)
   })
   it('works with a JWK client key', () => {
-    keyProvider = new KeyProvider({ clientKey, keyValueStore, keyOptions, jwksURI })
+    keyProvider = new KeyProvider({
+      config: { clientKey, keyValueStore, keyOptions, jwksURI }
+    })
 
     expect(keyProvider.clientKey).toEqual(clientKey)
   })

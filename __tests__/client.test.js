@@ -3,6 +3,7 @@ const { createMemoryStore } = require('../lib/memoryStore')
 const axios = require('axios')
 const { generateKey } = require('../lib/crypto')
 const { JWT } = require('@panva/jose')
+const { CONNECT_TO_OPERATOR_START, CONNECT_TO_OPERATOR } = require('../lib/events')
 jest.mock('axios')
 
 describe('client', () => {
@@ -96,6 +97,20 @@ describe('client', () => {
         client.events.on('CONNECTED', listener)
         await client.connect()
         expect(listener).toHaveBeenCalledTimes(1)
+      })
+
+      it('calls event.emit with CONNECT_TO_OPERATOR_START', async () => {
+        const listener = jest.fn()
+        client.events.on(CONNECT_TO_OPERATOR_START, listener)
+        await client.connect()
+        expect(listener).toHaveBeenCalledWith({ retry: 0 })
+      })
+
+      it('calls event.emit with CONNECT_TO_OPERATOR', async () => {
+        const listener = jest.fn()
+        client.events.on(CONNECT_TO_OPERATOR, listener)
+        await client.connect()
+        expect(listener).toHaveBeenCalled()
       })
 
       it('signs the payload', async () => {
