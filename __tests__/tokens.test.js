@@ -101,7 +101,7 @@ describe('tokens', () => {
 
       const payload = JWT.decode(authReq)
 
-      expect(payload.aud).toBe('mydata://account')
+      expect(payload.aud).toBe('egendata://account')
       expect(payload.iss).toBe('https://mycv.work')
     })
   })
@@ -150,7 +150,7 @@ describe('tokens', () => {
 
         const payload = JWT.decode(authReq)
 
-        expect(payload.aud).toBe('mydata://account')
+        expect(payload.aud).toBe('egendata://account')
         expect(payload.iss).toBe('https://mycv.work')
         expect(payload.sid).toBe('02cf1e9b-1322-4391-838f-22beeba3d1eb')
         expect(payload.displayName).toBe(config.displayName)
@@ -191,7 +191,7 @@ describe('tokens', () => {
 
         const payload = JWT.decode(authReq)
 
-        expect(payload.aud).toBe('mydata://account')
+        expect(payload.aud).toBe('egendata://account')
         expect(payload.iss).toBe('https://mycv.work')
         expect(payload.sid).toBe('02cf1e9b-1322-4391-838f-22beeba3d1eb')
         expect(payload.displayName).toBe(config.displayName)
