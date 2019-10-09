@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/egendata/client/compare/v1.0.0...v1.0.1) (2019-10-09)
+
+
+### Bug Fixes
+
+* trigger new release since previous one was unpublished ([e1af16b](https://github.com/egendata/client/commit/e1af16b))
+
 # [1.0.0](https://github.com/egendata/client/compare/v0.6.0...v1.0.0) (2019-10-09)
 
 
