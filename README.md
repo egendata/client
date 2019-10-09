@@ -71,7 +71,7 @@ where consentRequestData is
       description: 'A list of your work experience with dates.', // Description of the contents of the data area
       permissions: [ 'write' ], // Can be read or write
       purpose: 'In order to create a CV using our website.',
-      lawfulBasis: 'CONSENT' // One of 'CONSENT', 'CONTRACT', 'LEGAL_OBLIGATION', 'VITAL_INTERESTS', 'PUBLIC_TASK', 'LEGITIMATE_INTERESTS' 
+      lawfulBasis: 'CONSENT' // One of 'CONSENT', 'CONTRACT', 'LEGAL_OBLIGATION', 'VITAL_INTERESTS', 'PUBLIC_TASK', 'LEGITIMATE_INTERESTS'
     }
   ],
   expiry: 515185155 // a UNIX timestamp of when the consent will expire
@@ -81,8 +81,8 @@ and pendingRequest contains
 ```
 {
   id: // v4 uuid of the consent request
-  url: 
-  expires: 
+  url:
+  expires:
 }
 ```
 when this is approved by a user it triggers a CONSENT_APPROVED event (see below)
@@ -111,7 +111,7 @@ client.events.on('LOGIN_APPROVED', consent => {
       description: 'A list of your work experience with dates.', // Description of the contents of the data area
       permissions: [ 'write' ], // Can be read or write
       purpose: 'In order to create a CV using our website.',
-      lawfulBasis: 'CONSENT' // One of 'CONSENT', 'CONTRACT', 'LEGAL_OBLIGATION', 'VITAL_INTERESTS', 'PUBLIC_TASK', 'LEGITIMATE_INTERESTS' 
+      lawfulBasis: 'CONSENT' // One of 'CONSENT', 'CONTRACT', 'LEGAL_OBLIGATION', 'VITAL_INTERESTS', 'PUBLIC_TASK', 'LEGITIMATE_INTERESTS'
     }
   ]
 }
@@ -119,7 +119,7 @@ client.events.on('LOGIN_APPROVED', consent => {
 
 ### Login request format
 User logs in by scanning a QR-code containing:
-`mydata://login/PAYLOAD`
+`egendata://login/PAYLOAD`
 
 where PAYLOAD is a base64url encoded (RFC4648) JSON string containing:
 ```javascript

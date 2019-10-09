@@ -49,7 +49,7 @@ describe('connection', () => {
       payload = {
         type: 'CONNECTION_INIT',
         aud: 'http://localhost:51545',
-        iss: 'mydata://account',
+        iss: 'egendata://account',
         sid: 'd1f99125-4537-40f1-b15c-fd5e0f067c61',
         iat: 1558945645,
         exp: 1558949245
@@ -166,7 +166,7 @@ describe('connection', () => {
       connection = {
         type: 'CONNECTION',
         aud: 'http://localhost:51545',
-        iss: 'mydata://account',
+        iss: 'egendata://account',
         sid: 'd1f99125-4537-40f1-b15c-fd5e0f067c61',
         sub: 'ab6aaf9e-de79-4285-b14b-38c27b5d27a4',
         iat: 1558945645,
@@ -176,7 +176,7 @@ describe('connection', () => {
       payload = {
         type: 'CONNECTION_EVENT',
         aud: 'http://localhost:51545',
-        iss: 'mydata://account',
+        iss: 'egendata://account',
         sid: 'd1f99125-4537-40f1-b15c-fd5e0f067c61',
         iat: 1558945645,
         exp: 1558949245,
