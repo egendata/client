@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/egendata/client/compare/v1.0.1...v1.0.2) (2019-12-11)
+
+
+### Bug Fixes
+
+* 🐛 issue where we did not return anything ([#68](https://github.com/egendata/client/issues/68)) ([69e7bfa](https://github.com/egendata/client/commit/69e7bfa75dbc244e571a3a71d47cdcc704afcd9a))
+
 ## [1.0.1](https://github.com/egendata/client/compare/v1.0.0...v1.0.1) (2019-10-09)
 
 
