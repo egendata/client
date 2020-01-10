@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/egendata/client/compare/v1.1.0...v1.2.0) (2020-01-10)
+
+
+### Features
+
+* 🎸 Added domain to config ([#80](https://github.com/egendata/client/issues/80)) ([5e376ab](https://github.com/egendata/client/commit/5e376abda07dcf73b310bd2e3ca877e0f64ae415))
+
 # [1.1.0](https://github.com/egendata/client/compare/v1.0.2...v1.1.0) (2020-01-10)
 
 
