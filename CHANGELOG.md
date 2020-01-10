@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/egendata/client/compare/v1.0.2...v1.1.0) (2020-01-10)
+
+
+### Features
+
+* 🎸 Now supports `domain` in config ([bf4159d](https://github.com/egendata/client/commit/bf4159d060015904cb10046cea0853f96739add4))
+
 ## [1.0.2](https://github.com/egendata/client/compare/v1.0.1...v1.0.2) (2019-12-11)
 
 
