@@ -22,10 +22,7 @@ const config = {
   description: 'A nice description of your fantastic service',
   clientId: 'https://mycv.work', // Application domain with protocol
   operator: 'https://smoothoperator.work', // URL of Operator
-  clientKeys: {
-    publicKey: '-----BEGIN RSA PUBLIC KEY-----\nMIGJ...',
-    privateKey: '-----BEGIN RSA PRIVATE KEY-----\nMIICX...'
-  },
+  clientKey: '-----BEGIN RSA PRIVATE KEY-----\nMIICX...',
   jwksPath: '/jwks',     // endpoint for keys in jwks format
   eventsPath: '/events'  // endpoint for events - webhook style
 }
